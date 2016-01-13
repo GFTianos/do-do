@@ -1,107 +1,68 @@
-# Angular Material-Start
+# Do-Do 
 
-This Material **start*** project is a *seed* for AngularJS Material applications. The project contains a sample AngularJS application and is pre-configured to install the Angular framework and a bunch of development and testing tools for instant web development gratification.
+Aplicación para cacharrear con angular y material-design, además de crear una app para forrarnos. :money_with_wings:
 
-This sample application is intended to be useful as both a learning tool and a skeleton application
-for a typical [AngularJS Material](http://material.angularjs.org/) web app: comprised of a Side navigation
-area and a content area. You can use it to quickly bootstrap your AngularJS webapp projects and dev
-environment for these projects.
+## Idea de la app
 
-### What is the UX?
+La idea es crear una aplicación (corrigeme si me equivoco Jorge xD) para getionar las tareas diarias que tenemos 
+ademas de las que se nos van quedando atrasadas. Desde ella podremos ver que tareas estamos realizando o realizaremos
+cada uno del proyecto.
 
-Below is a snapshot of the Starter-App with the Users' *master-detail* view. Also shown is the user
-experience that will is displayed for smaller device sizes. The responsive layout changes to hide
-the user list, reveal the **menu** button. In the User Details view, you may also click the
-**share** button  to show the Contact &lt;User&gt; bottom sheet view.
 
-<br/>
+## Cómo empezar
 
-![material-starter-ux2](https://cloud.githubusercontent.com/assets/210413/6448551/70864488-c0e0-11e4-8767-c4e1e4c2f343.png)
+#### Requisitos
 
-<br/>
-
-This Starter app demonstrates how:
-
-*  Angular Material `layout` and `flex` options can easily configure HTML containers
-*  Angular Material components `<md-toolbar>`, `<md-sidenav>`, `<md-icon>` can be quickly used
-*  Custom controllers can use and show `<md-bottomsheet>` with HTML templates
-*  Custom controller can easily, programmatically open & close the SideNav component.
-*  Responsive breakpoints and `$mdMedia` are used
-*  Theming can be altered/configured using `$mdThemingProvider`
-*  ARIA features are supported by Angular Material and warnings can be used to improve accessibility.
-
-### Tutorials
-
-The repository contains both ES5 and ES6 versions of the application. Traditional development with
-ES5 standards and solutions are presented here by default. Tutorials are included: step-by-step
-instructions that clearly demonstrate how the Starter application can be created in minutes.
-
-> These tutorials will be presented live, on-stage at **ng-conf 2015, Utah**.
-
-Developers should checkout the following repository branches for:
-
-* Branch [**Starter - ES5 Tutorials**](https://github.com/angular/material-start/tree/es5-tutorial):
-for  ES5 Tutorial steps & development process.
-* Branch [**Starter - ES6**](https://github.com/angular/material-start/tree/es6): same application as created in the **[master](https://github.com/angular/material-start)** branch, but implemented with ES6 and JSPM.
-
-> The **README** for the ES6 branch will provide some details showing how easy, <u>more simplifed</u>,
-and <u>more manageable</u> it is to develop ES6 applications with Angular Material 1.x. As time permits, we will expand on that information.<br/><br/> 
-
-## Getting Started
-
-#### Prerequisites
-
-You will need **git** to clone the material-start repository. You can get git from
+Vas a necesitar **git** para clonar el proyecto. Puedes conseguirlo en
 [http://git-scm.com/](http://git-scm.com/).
 
-We also use a number of node.js tools to initialize and test material-start. You must have node.js and
-its package manager (npm) installed.  You can get them from [http://nodejs.org/](http://nodejs.org/).
+Para inicializar el proyecto y gestionar las dependencias vas a necesitas **node** y su gestionador de paquetes **npm**.
+Puedes conseguirlo desde [http://nodejs.org/](http://nodejs.org/).
 
-#### Clone material-start
+#### Instalando dependencias 
 
-To get you started you can simply clone `master` branch from the
-[Material-Start](https://github.com/angular/material-start) repository and install the dependencies:
+Nosotros distinguiremos dos tipos de dependencias. las que son necesarias para que la aplicación funcione y las que no.
+Estas últimas serán herramientas que necesitaremos para desarrollar el proyecto, desplegar, y todo ese tipo de cosas
+que son invisibles para la aplicación una vez puesta en producción.
 
-> NOTE: The `master` branch contains the traditional, ES5 implementation familiar to Angular developers.
-
-Clone the material-start repository using [git][git]:
-
-```
-git clone https://github.com/angular/material-start.git
-cd material-start
-```
-
-If you just want to start a new project without the material-start commit history then you can do:
-
-```bash
-git clone --depth=1 https://github.com/angular/material-start.git <your-project-name>
-```
-
-The `depth=1` tells git to only pull down one commit worth of historical data.
-
-#### Install Dependencies
-
-We have two kinds of dependencies in this project: tools and AngularJS framework code.  The tools help
-us manage and test the application.
-
-* We get the tools we depend upon via `npm`, the [node package manager][npm].
-* We get the AngularJS code via `bower`, a [client-side code package manager][bower].
-
-We have preconfigured `npm` to automatically run `bower` so we can simply do:
+Para instalar las dependencias deberemos lanzar el siguiente comando en la consola (Recomiendo la git bash)
 
 ```
 npm install
 ```
+Que a partir del `package.json` nos instalará las distintas dependencias del proyecto.
+Tambien viene configurado para una vez terminado de ejecutarse instale las dependencias del Front 
 
-Behind the scenes this will also call `bower install`.  You should find that you have two new
-folders in your project.
+```
+bower install
+```
 
-* `node_modules` - contains the npm packages for the tools we need
-* `app/bower_components` - contains the AngularJS framework files
++ INFO en Google ;)
 
-*Note that the `bower_components` folder would normally be installed in the root folder but
-material-start changes this location through the `.bowerrc` file.  Putting it in the app folder makes
-it easier to serve the files by a web server.*
+Una vez ejecutados estos dos comandos tendremos estos dos nuevos directorios en nuestro proyecto.
+
+* `node_modules` - Contiene los paquetes de npm necesarios para construir nuestra app.
+* `app/bower_components` - Contiene las dependencias para que nuestra aplicación funcione.
+
+### Corriendo nuestra aplicación durante el desarrollo
+
+Para lanzar la aplicación mientras estamos desarrollando, esta semilla (proyecto simple para empezar aplicaciones)
+viene configurado para ser lanzado con **http-server** un servidor web local para el desarrollo.
+
+Para instalarlo de forma global (y ser accesible desde cualquier directorio)
+
+```
+npm install -g http-server
+```
+
+Una vez instalado podremos lanzar nuestro proyecto, desde el directorio de la aplicación
+
+```
+cd app
+http-server
+```
+
+## A partir de aquí dejo algunas secciones originales de la semilla que pueden ser útiles
 
 ### Run End-to-End Tests
 
@@ -212,6 +173,8 @@ configure your server to serve the files under the `app/` directory.
 
 
 ## Contact
+
+Basado en https://github.com/angular/material-start
 
 For more information on AngularJS please check out http://angularjs.org/
 For more information on Angular Material, check out https://material.angularjs.org/
