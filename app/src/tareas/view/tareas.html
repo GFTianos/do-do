@@ -1,0 +1,14 @@
+<p>- HOY - </p>
+
+<ul>
+  <li ng-repeat="tarea in ul.selected.tareas.tareasHoy">
+    <label for="taskToday_{{$index}}"><input id="taskToday_{{$index}}" type="checkbox"/> <span>{{tarea.title}}</span></label>
+  </li>
+</ul>
+
+<p>- HISTÓRICO -</p>
+<ul>
+  <li ng-repeat="tarea in ul.selected.tareas.tareasHistorico">
+    <label for="taskHistory_{{$index}}"><input id="taskHistory_{{$index}}" type="checkbox"/> <span>({{tarea.date|date:'dd/MM/yyyy'}}) - {{tarea.title}}</span></label>
+  </li>
+</ul>

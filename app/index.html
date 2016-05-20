@@ -64,20 +64,7 @@
           <md-icon md-svg-icon="share"></md-icon>
         </md-button>
 
-        <ul>
-          <li ng-repeat="task in ul.selected.tasksToday">
-            <label for="taskToday_{{$index}}"><input id="taskToday_{{$index}}" type="checkbox"/> <span>{{task.title}}</span></label>
-          </li>
-        </ul>
-
-        <ul>
-          <li ng-repeat="task in ul.selected.tasksHistory">
-            <label for="taskHistory_{{$index}}"><input id="taskHistory_{{$index}}" type="checkbox"/> <span>({{task.date|date:'dd/MM/yyyy'}}) - {{task.title}}</span></label>
-          </li>
-        </ul>
-
-
-
+        <lista-tareas></lista-tareas>
 
       </md-content>
 
@@ -88,14 +75,16 @@
     <script src="./bower_components/angular-aria/angular-aria.js"></script>
     <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
 
+    <script src="./src/tareas/Tareas.js"></script>
     <script src="./src/users/Users.js"></script>
     <script src="./src/users/UserController.js"></script>
     <script src="./src/users/UserService.js"></script>
 
+
     <script type="text/javascript">
 
           angular
-              .module('starterApp', ['ngMaterial', 'users'])
+              .module('starterApp', ['ngMaterial', 'users', 'tareas'])
               .config(function($mdThemingProvider, $mdIconProvider){
 
                   $mdIconProvider
