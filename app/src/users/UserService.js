@@ -18,87 +18,77 @@
         name: 'Manson',
         avatar: 'svg-1',
         content: 'Me gusta programar, pero me gusta más aun echar horas',
-        tareas:{
-          tareasHoy: [
-            {
-              date: "2016-05-15",
-              title: "maquetar nuevo diseño pantalla X",
-              finished: false,
-              position: 1
-            },
-            {date: "2016-05-15",
-              title: "pedir por email a Charly que me pase resultados de test de seguridad",
-              finished: false,
-              position: 1
-            },
-            {date: "2016-05-15",
-              title: "Publicar nuevo servicio InformaVistoService",
-              finished: false,
-              position: 1
-            }
-          ],
-          tareasHistorico: [
-            {
-              date: "2016-05-14",
-              title: "Desarrollar nuevo servicio InformaVistoService",
-              finished: false,
-              position: 1
-            },
-            {date: "2016-05-14",
-              title: "Enviar solicitud de test de seguridad, entorno ya disponible",
-              finished: false,
-              position: 1
-            },
-            {date: "2016-05-13",
-              title: "Revisión requisitos usuario InformaVistoService",
-              finished: false,
-              position: 1
-            }
-          ]
-        }
+        tareas:[
+          {
+            date: "2016-05-24",
+            title: "pasar por parámetro la lista de tareas a la directiva lista-tareas",
+            finished: false,
+            position: 1
+          },
+          {date: "2016-05-15",
+            title: "subir tarea a la lista de hoy -> fijar fecha de hoy y listo",
+            finished: false,
+            position: 1
+          },
+          {date: "2016-05-15",
+            title: "enganchar con firebase",
+            finished: false,
+            position: 1
+          },
+          {date: "2016-05-14",
+            title: "Desarrollar nuevo servicio InformaVistoService",
+            finished: false,
+            position: 1
+          },
+          {date: "2016-05-14",
+            title: "Enviar solicitud de test de seguridad, entorno ya disponible",
+            finished: false,
+            position: 1
+          },
+          {date: "2016-05-13",
+            title: "Revisión requisitos usuario InformaVistoService",
+            finished: false,
+            position: 1
+          }
+        ]
       },
       {
         name: 'Viscaralascasca',
         avatar: 'svg-2',
         content: 'Suelo jugar al rol sin parar, y a veces hago commits',
-        tareas:{
-          tareasHoy: [
-            {
-              date: "2016-05-15",
-              title: "Programar comportamientos en la pantalla de comunicaciones",
-              finished: false,
-              position: 1
-            },
-            {date: "2016-05-15",
-              title: "Abrir incidencia por dependencia de host en el api cuando consultamos comunicaciones",
-              finished: false,
-              position: 1
-            },
-            {date: "2016-05-15",
-              title: "Reparto de tareas pantalla de comunicaciones",
-              finished: false,
-              position: 1
-            }
-          ],
-          tareasHistorico: [
-            {
-              date: "2016-05-13",
-              title: "Reunión de planificación próximo sprint",
-              finished: false,
-              position: 1
-            },
-            {date: "2016-05-12",
-              title: "Incidencia al consultar el número de mensajes sin leer.",
-              finished: false,
-              position: 1
-            },
-            {date: "2016-05-09",
-              title: "Desarrollo front pantalla de comunicaciones",
-              finished: false,
-              position: 1
-            }
-          ]
-        }
+        tareas:[
+          {
+            date: "2016-05-15",
+            title: "Programar comportamientos en la pantalla de comunicaciones",
+            finished: false,
+            position: 1
+          },
+          {date: "2016-05-15",
+            title: "Abrir incidencia por dependencia de host en el api cuando consultamos comunicaciones",
+            finished: false,
+            position: 1
+          },
+          {date: "2016-05-15",
+            title: "Reparto de tareas pantalla de comunicaciones",
+            finished: false,
+            position: 1
+          },
+          {date: "2016-05-13",
+            title: "Reunión de planificación próximo sprint",
+            finished: false,
+            position: 1
+          },
+          {date: "2016-05-12",
+            title: "Incidencia al consultar el número de mensajes sin leer.",
+            finished: false,
+            position: 1
+          },
+          {date: "2016-05-09",
+            title: "Desarrollo front pantalla de comunicaciones",
+            finished: false,
+            position: 1
+          }
+        ]
       }
     ];
 

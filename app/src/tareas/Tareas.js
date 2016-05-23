@@ -11,7 +11,7 @@
       restrict: 'E',
       templateUrl: 'src/tareas/view/tareas.html',
       controllerAs: 'tareas',
-      controller: function(){
+      controller: function($filter){
 
         this.estaResuelta = function(tarea){
           return tarea.resuelta;
@@ -22,9 +22,10 @@
         };
 
         this.tareaNueva = {};
+        this.hoy = $filter('date')(new Date(), 'yyyy-MM-dd');
 
         this.anadeTarea = function(listaTareas){
-          this.tareaNueva.date = new Date();
+          this.tareaNueva.date = this.hoy;
           listaTareas.push(this.tareaNueva);
           this.tareaNueva = {};
         };
