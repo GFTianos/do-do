@@ -3,6 +3,12 @@
   
   <div class="hoy">
     <p>- HOY - </p>
+
+    <form name="nuevaTareaForm">
+      <input type="text" required ng-model="tareas.tareaNueva.title" placeholder="Nueva tarea" />
+      <input type="button" ng-click="nuevaTareaForm.$valid && tareas.anadeTarea(ul.selected.tareas.tareasHoy)" value="+" />
+    </form>
+
     <ul class="hoy">
       <li ng-repeat="tarea in ul.selected.tareas.tareasHoy">
         <label for="taskToday_{{$index}}">

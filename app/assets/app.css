@@ -131,4 +131,5 @@ span.name {
 
 
 /* Tareas */
-.tareas .resuelta{text-decoration: line-through;}
+.tareas li {list-style: none;}
+.tareas .resuelta {text-decoration: line-through;}

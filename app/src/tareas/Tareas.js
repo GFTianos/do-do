@@ -2,12 +2,7 @@
   var app = angular.module('tareas', []);
 
   app.controller('TareasController', function(){
-    this.tarea = {};
 
-    this.anadeTarea = function(usuario){
-      usuario.tareas.push(this.tarea);
-      this.tarea = {};
-    };
 
   });
 
@@ -25,7 +20,15 @@
         this.cambiarEstadoResuelta = function(tarea){
           tarea.resuelta = !tarea.resuelta;
         };
-      };
+
+        this.tareaNueva = {};
+
+        this.anadeTarea = function(listaTareas){
+          this.tareaNueva.date = new Date();
+          listaTareas.push(this.tareaNueva);
+          this.tareaNueva = {};
+        };
+      }
     };
   });
 
