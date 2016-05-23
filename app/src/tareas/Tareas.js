@@ -17,21 +17,16 @@
       templateUrl: 'src/tareas/view/tareas.html',
       controllerAs: 'tareas',
       controller: function(){
-        this.tab = 1;
 
         this.estaResuelta = function(tarea){
           return tarea.resuelta;
         };
 
-        this.resolverTarea = function(tarea){
-          tarea.resuelta = true;
+        this.cambiarEstadoResuelta = function(tarea){
+          tarea.resuelta = !tarea.resuelta;
         };
-
-        this.reabrirTarea = function(tarea){
-          tarea.resuelta = false;
-        }
-      }
-    }
+      };
+    };
   });
 
 })();
