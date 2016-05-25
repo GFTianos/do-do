@@ -20,34 +20,34 @@
         content: 'Me gusta programar, pero me gusta más aun echar horas',
         tareas:[
           {
-            date: "2016-05-24",
+            date: "2016-05-26",
             title: "pasar por parámetro la lista de tareas a la directiva lista-tareas",
-            finished: false,
+            resuelta: true,
             position: 1
           },
           {date: "2016-05-15",
             title: "subir tarea a la lista de hoy -> fijar fecha de hoy y listo",
-            finished: false,
+            resuelta: false,
             position: 1
           },
           {date: "2016-05-15",
             title: "enganchar con firebase",
-            finished: false,
+            resuelta: false,
             position: 1
           },
           {date: "2016-05-14",
             title: "Desarrollar nuevo servicio InformaVistoService",
-            finished: false,
+            resuelta: true,
             position: 1
           },
           {date: "2016-05-14",
             title: "Enviar solicitud de test de seguridad, entorno ya disponible",
-            finished: false,
+            resuelta: true,
             position: 1
           },
           {date: "2016-05-13",
             title: "Revisión requisitos usuario InformaVistoService",
-            finished: false,
+            resuelta: false,
             position: 1
           }
         ]
@@ -60,32 +60,32 @@
           {
             date: "2016-05-15",
             title: "Programar comportamientos en la pantalla de comunicaciones",
-            finished: false,
+            resuelta: false,
             position: 1
           },
           {date: "2016-05-15",
             title: "Abrir incidencia por dependencia de host en el api cuando consultamos comunicaciones",
-            finished: false,
+            resuelta: true,
             position: 1
           },
           {date: "2016-05-15",
             title: "Reparto de tareas pantalla de comunicaciones",
-            finished: false,
+            resuelta: true,
             position: 1
           },
           {date: "2016-05-13",
             title: "Reunión de planificación próximo sprint",
-            finished: false,
+            resuelta: false,
             position: 1
           },
           {date: "2016-05-12",
             title: "Incidencia al consultar el número de mensajes sin leer.",
-            finished: false,
+            resuelta: true,
             position: 1
           },
           {date: "2016-05-09",
             title: "Desarrollo front pantalla de comunicaciones",
-            finished: false,
+            resuelta: true,
             position: 1
           }
         ]

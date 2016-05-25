@@ -11,10 +11,10 @@
 
     <ul class="hoy">
       <li ng-repeat="tarea in ul.selected.tareas | filter:{date:tareas.hoy}">
-        <label for="taskToday_{{$index}}">
-          <input id="taskToday_{{$index}}" type="checkbox" ng-click="tareas.cambiarEstadoResuelta(tarea)" />
-          <span ng-class="{resuelta:tareas.estaResuelta(tarea)}">{{tarea.title}}</span>
-        </label>
+        <md-checkbox id="taskToday_{{$index}}" ng-model="tarea.resuelta" />
+          <span ng-class="{resuelta:tarea.resuelta}">{{tarea.title}}</span>
+        </md-checkbox>
+
       </li>
     </ul>
 
@@ -22,10 +22,10 @@
 
     <ul class="historico">
       <li ng-repeat="tarea in ul.selected.tareas | filter: {date:'!' + tareas.hoy}">
-        <label for="taskHistory_{{$index}}">
-          <input id="taskHistory_{{$index}}" type="checkbox" ng-click="tareas.cambiarEstadoResuelta(tarea)" />
-          <span ng-class="{resuelta:tareas.estaResuelta(tarea)}">{{tarea.title}}</span>
-        </label>
+        <md-checkbox id="taskHistory_{{$index}}" ng-model="tarea.resuelta" />
+          <span ng-class="{resuelta:tarea.resuelta}">{{tarea.title}}</span>
+        </md-checkbox>
+
       </li>
     </ul>
 

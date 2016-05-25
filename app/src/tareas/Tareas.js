@@ -13,14 +13,6 @@
       controllerAs: 'tareas',
       controller: function($filter){
 
-        this.estaResuelta = function(tarea){
-          return tarea.resuelta;
-        };
-
-        this.cambiarEstadoResuelta = function(tarea){
-          tarea.resuelta = !tarea.resuelta;
-        };
-
         this.tareaNueva = {};
         this.hoy = $filter('date')(new Date(), 'yyyy-MM-dd');
 
