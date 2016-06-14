@@ -64,7 +64,15 @@
           <md-icon md-svg-icon="share"></md-icon>
         </md-button>
 
-        <lista-tareas></lista-tareas>
+        <div layout-gt-sm="row">
+          <lista-tareas tareas="ul.selected.tareas"></lista-tareas>
+
+        </div>
+        <div layout-gt-sm="row">
+          <ul>
+            <li>dependencia 1</li>
+          </ul>
+        </div>
 
       </md-content>
 

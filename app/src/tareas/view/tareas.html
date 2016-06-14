@@ -5,29 +5,33 @@
     <h3>HOY</h3>
 
     <form name="nuevaTareaForm">
-      <input type="text" required ng-model="tareas.tareaNueva.title" placeholder="Nueva tarea" />
-      <input type="button" ng-click="nuevaTareaForm.$valid && tareas.anadeTarea(ul.selected.tareas)" value="+" />
+
+      <md-input-container>
+        <label>Nueva tarea</label>
+        <input ng-model="vm.tareaNueva.title">
+      </md-input-container>
+
+      <md-button class="md-raised md-primary" ng-click="vm.tareaNueva.title && vm.anadeTarea(tareas)">+</md-button>
+
     </form>
 
-    <ul class="hoy">
-      <li ng-repeat="tarea in ul.selected.tareas | filter:{date:tareas.hoy}">
-        <md-checkbox id="taskToday_{{$index}}" ng-model="tarea.resuelta" />
-          <span ng-class="{resuelta:tarea.resuelta}">{{tarea.title}}</span>
-        </md-checkbox>
+    <md-list class="hoy">
+      <md-list-item ng-repeat="tarea in tareas | filter:{date:vm.hoy}">
+        <md-checkbox id="taskToday_{{$index}}" class="md-primary" ng-model="tarea.resuelta" /></md-checkbox>
+        <p ng-class="{resuelta:tarea.resuelta}">{{tarea.title}}</p>
 
-      </li>
-    </ul>
+      </md-list-item>
+    </md-list>
 
     <h3>HISTÓRICO</h3>
 
-    <ul class="historico">
-      <li ng-repeat="tarea in ul.selected.tareas | filter: {date:'!' + tareas.hoy}">
-        <md-checkbox id="taskHistory_{{$index}}" ng-model="tarea.resuelta" />
-          <span ng-class="{resuelta:tarea.resuelta}">{{tarea.title}}</span>
-        </md-checkbox>
+    <md-list class="historico">
+      <md-list-item ng-repeat="tarea in tareas | filter: {date:'!' + vm.hoy}">
+        <md-checkbox id="taskHistory_{{$index}}" class="md-primary" ng-model="tarea.resuelta" /></md-checkbox>
+        <p ng-class="{resuelta:tarea.resuelta}">{{tarea.title}}</span>
 
-      </li>
-    </ul>
+      </md-list-item>
+    </md-list>
 
   </div>
 

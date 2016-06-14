@@ -10,7 +10,11 @@
     return{
       restrict: 'E',
       templateUrl: 'src/tareas/view/tareas.html',
-      controllerAs: 'tareas',
+      controllerAs: 'vm',
+      scope: {
+        tareas: "="
+      },
+
       controller: function($filter){
 
         this.tareaNueva = {};
